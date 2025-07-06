@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charity Details - Donation App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Status Bar -->
+      <div class="status-bar">
+        <div class="time">9:41</div>
+        <div class="icons">
+          <i data-lucide="calendar"></i>
+          <i data-lucide="sun"></i>
+          <i data-lucide="user-check"></i>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header class="header">
+        <button id="back-button" class="back-button">
+          <i data-lucide="arrow-left"></i>
+        </button>
+        <h1 class="title">Center details</h1>
+        <div class="spacer"></div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="content">
+        <!-- Charity Image -->
+        <div class="charity-image">
+          <img id="charity-image" src="./images/oms.png" alt="Charity Image">
+        </div>
+        
+        <!-- Charity Details -->
+        <div class="charity-details">
+          <div class="charity-header">
+            <h1 id="charity-name" class="charity-name"></h1>
+            <div class="action-buttons">
+              <button class="action-button call-button">
+                <i data-lucide="phone"></i>
+              </button>
+              <button class="action-button schedule-button">
+                <i data-lucide="clock"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="rating">
+            <span class="rating-number">4.5</span>
+            <div class="stars">
+              <i data-lucide="star" class="star filled"></i>
+              <i data-lucide="star" class="star filled"></i>
+              <i data-lucide="star" class="star filled"></i>
+              <i data-lucide="star" class="star filled"></i>
+              <i data-lucide="star" class="star"></i>
+            </div>
+            <span id="charity-location" class="location"></span>
+          </div>
+          
+          <div class="distance">
+            <span id="charity-distance" class="distance-text"></span>
+          </div>
+          
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at leo arcu. Nunc posuere quam et mi rutrum, ac euismod tortor vulputate. Suspendisse a euismod tellus. Vestibulum elementum tincidunt urna, a ultricies ligula molestie id.
+          </p>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="action-bar">
+          <button id="cancel-button" class="cancel-button">Cancel</button>
+          <button id="donate-button" class="donate-button">Donate</button>
+        </div>
+      </main>
+      
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <a href="schedule.html" class="nav-item">
+          <i data-lucide="calendar-clock"></i>
+        </a>
+        <a href="home.html" class="nav-item active">
+          <i data-lucide="home"></i>
+        </a>
+        <a href="donate.html" class="nav-item">
+          <i data-lucide="gift"></i>
+        </a>
+      </nav>
+      
+      <!-- Toast Notification (Hidden by default) -->
+      <div id="toast" class="toast">
+        <div class="toast-content">
+          <div class="toast-title">Donation successful</div>
+          <div class="toast-description">Thank you for donating to this charity</div>
+        </div>
+        <button class="toast-close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="charities.js"></script>
+    <script src="charity-details.js"></script>
+  </body>
+</html>
